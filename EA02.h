@@ -1,5 +1,5 @@
-#ifndef EA02.h
-#define EA02 .h
+#ifndef EA02_h
+#define EA02_h
 
 #include <iostream>
 
@@ -17,7 +17,11 @@ public:
         this->b = 0;
         this->h = 0;
     }
-    Figura(int b, int h);
+    Figura(int b, int h)
+    {
+        this->b = h;
+        this->h = h;
+    }
     void setPerimetro(float a);
     float getPerimetro();
 };
