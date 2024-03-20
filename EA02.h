@@ -54,13 +54,11 @@ public:
 
 class Circulo : public Figura
 {
-    public: 
-    Circulo(int b ) : Figura(b, b)
+public:
+    Circulo(int b) : Figura(b, b)
     {
-        setPerimetro(b + b + h + h);
+        setPerimetro(b * (2 * 3.1416));
     }
 };
-
-;
 
 #endif
