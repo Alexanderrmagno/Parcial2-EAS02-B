@@ -1,5 +1,5 @@
 #ifndef EA02.h
-#define EA02.h
+#define EA02 .h
 
 #include <iostream>
 
@@ -11,70 +11,56 @@ private:
     int b, h;
     float p;
 
-    /*
-        Implementa los constructores y funciones de la clase Figura.
-        La función setPerimetro UNICAMENTE recibe el perímetro y lo asigna, NO lo calcula.
-    */
-
 public:
-    Figura();
+    Figura()
+    {
+        this->b = 0;
+        this->h = 0;
+    }
     Figura(int b, int h);
     void setPerimetro(float a);
     float getPerimetro();
 };
 
-float Figura::getPerimetro() 
+float Figura::getPerimetro()
 {
-
-return 0;
-
+    return p;
 }
 
 void Figura::setPerimetro(float a)
 {
-
-this-> b = b;
-
+    this->p = a;
 }
 
+/////////////////////////////////////////////////////
 
-
-    /*
-        Implementa la clase Cuadrado que hereda de Figura. ok
-        Crear constructor de Cuadrado que herede del constructor de Figura.
-        Calcular y asignar el perímetro del cuadrado.
-    */
-
-    class Cuadrado : public Figura
+class Cuadrado : public Figura
 {
-
-    Cuadrado() : 
+public:
+    Cuadrado(int b) : Figura(b, b)
+    {
+        setPerimetro(b * 4);
+    };
 };
-
-/*
-    Implementa la clase Rectángulo que hereda de Figura.
-    Crear constructor de Rectángulo que herede del constructor de Figura.
-    Calcular y asignar el perímetro del Rectángulo.
-*/
 
 class Rectangulo : public Figura
 {
-
-
-
+public:
+    Rectangulo(int b, int h) : Figura(b, h)
+    {
+        setPerimetro(b + b + h + h);
+    };
 };
-
-/*
-    Implementa la clase Círculo que hereda de Figura.
-    Crear constructor de Círculo que herede del constructor de Figura.
-    Calcular y asignar el perímetro del Círculo.
-*/
 
 class Circulo : public Figura
 {
-
-Circulo(int b, int h, );
-
+    public: 
+    Circulo(int b ) : Figura(b, b)
+    {
+        setPerimetro(b + b + h + h);
+    }
 };
+
+;
 
 #endif
